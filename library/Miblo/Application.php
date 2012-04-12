@@ -250,9 +250,6 @@ class Application
 		{
 			if ($file->isFile())
 			{
-				// Identify file type
-				$fileType = 'html';
-				
 				// Empty file title and default template
 				$fileTitle = 'Empty';
 				$fileTemplate = 'post';
@@ -324,7 +321,7 @@ class Application
 					$fileShort[] = $fileContent[$i];
 				}
 				
-				$fileDate = array(gmdate('Y', $fileTimestamp), gmdate('m', $fileTimestamp), gmdate('d', $fileTimestamp));
+				$fileDate = array(gmdate('Y', $fileTimestamp), gmdate('m', $fileTimestamp));
 				
 				$this->_posts[$fileTimestamp] = array(
 					'hash'				=> substr(md5(implode('-', $fileDate)), 0, 8),
@@ -339,7 +336,6 @@ class Application
 					'file'				=> $file->getFilename(),
 					'fancyName'			=> $fileName . '.html',
 					'link'				=> $this->_path . $fileDate[0] . '/' . $fileDate[1] . '/' . $fileName . '.html',
-					'type'				=> $fileType,
 				);				
 			}
 		}

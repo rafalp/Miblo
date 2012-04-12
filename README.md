@@ -22,7 +22,7 @@ Configuring your blog
 ---------------------
 Your blog's configuration is stored in generate.php file. Once you open it, you will quickly realise that on initialisation, Miblo accepts two arguments: first one is path to current Miblo's directory, second one is array of configuration variables.
 
-Following settings are avaiable for you to configure your project:
+Following settings are available for you to configure your project:
 
 * author - Blog author name
 * name - Blog name
@@ -30,9 +30,9 @@ Following settings are avaiable for you to configure your project:
 * domain - Blog domain, used in generation of RSS
 * path - Blog path, allows you to put your blog outside your domains home directory
 * format - Allows you to set a way Miblo formats dates, defaults to "l, j F Y"
-* translation - Language used to translate dates. Defauts to "en", but "pl" is also avaiable
+* translation - Language used to translate dates. Defauts to "en", but "pl" is also available
 
-author, name, description, domain and path and format are also avaiable for use in templates and your entries.
+author, name, description, domain and path and format are also available for use in templates and your entries.
 
 
 Writing new entries
@@ -70,8 +70,17 @@ Everything you write since this point is threated as entry content. If you want 
 
 Customising appearance
 ----------------------
+Customisation of Miblo is two step process. First you edit templates located in "templates" directory, second you create or edit assets (stylesheets, javascript images) that will be used by generated pages and are located in site directory.
 
+Defautly Miblo uses following templates during generation:
 
+* wrapper.html.twig - Used on both blog index and post pages
+* index.html.twig - Used on blog index page to present list of blog entries
+* post.html.twig - Used on post page to present post content
+* rss.xml.twig - Used to generate RSS channel for your blog
+
+Miblo is using Twig (http://twig.sensiolabs.org) for parsing templates.
+For detailed list of variables available in every template, see "TEMPLATES.md" file.
 
 Generating and publishing
 -------------------------
