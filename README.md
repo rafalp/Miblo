@@ -75,3 +75,6 @@ Customising appearance
 
 Generating and publishing
 -------------------------
+Once everything is done, all that is left is to generate and publish your blog. To generate new site you simply run generate.php file that is located in Miblo directory. Once its work is complete, all you have to do is to upload files located in "site" directory to your server.
+
+Congratulations, your blog is now waiting for readers!
