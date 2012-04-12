@@ -1,0 +1,27 @@
+<div class="row">
+	<div class="span16">
+		<h1>{{ title }}</h1>
+		<p class="help-block">{{ date }}</p>
+	</div>
+</div>
+
+<div class="row">
+	<div class="span16">
+		{{ text|raw }}
+	</div>
+</div>
+
+<div class="row">
+	<div class="span16">
+		<h3>Navigation:</h3>
+		<ul>
+			{% if next is not empty %}
+			<li><a href="{{ next.link }}">{{ next.title }}</a></li>
+			{% endif %}
+			{% if previous is not empty %}
+			<li><a href="{{ previous.link }}">{{ previous.title }}</a></li>
+			{% endif %}
+			<li><a href="{{ path }}">Index</a></li>
+		</ul>
+	</div>
+</div>

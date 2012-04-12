@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+	<title>Miblo Demoblog RSS</title>
+	<description>A demonstration of Miblo capabilities</description>
+	<link>/miblo/</link>
+	<lastBuildDate>Thu, 12 Apr 2012 20:51:02 +0200 </lastBuildDate>
+	<pubDate>Thu, 01 Jan 1970 01:00:00 +0100 </pubDate>
+	<ttl>86400</ttl>
+	<item>
+		<title>Welcome to Miblo!</title>
+		<description>Miblo is blog-aware static site generator, here is what you should know.</description>
+		<link>/miblo/2012/04/welcome-to-miblo.html</link>
+		<guid>de0ec1db</guid>
+		<pubDate>Thu, 12 Apr 2012 00:00:00 +0200 </pubDate>
+	</item>
+</channel>
+</rss>

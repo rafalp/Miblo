@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+	<title>{{ name }} RSS</title>
+	<description>{{ description }}</description>
+	<link>{{ domain ~ path }}</link>
+	<lastBuildDate>{{ lastBuildDate }} </lastBuildDate>
+	<pubDate>{{ pubDate }} </pubDate>
+	<ttl>86400</ttl>
+{% for post in posts %}
+	<item>
+		<title>{{ post.title }}</title>
+		<description>{{ post.description }}</description>
+		<link>{{ domain ~ post.link }}</link>
+		<guid>{{ post.hash }}</guid>
+		<pubDate>{{ post.pubDate }} </pubDate>
+	</item>
+{% endfor %}
+</channel>
+</rss>

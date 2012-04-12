@@ -1,0 +1,18 @@
+footer {
+	border-top: 1px solid #EEE;
+	margin-top: 24px;
+	padding-top: 8px;
+	
+	color: #CCC;
+}
+
+	footer p {
+		text-align: right;
+	}
+
+.post-date {
+	padding-top: 6px;
+	text-align: right;
+	
+	color: #CCC;
+}
