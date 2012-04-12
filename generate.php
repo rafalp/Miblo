@@ -24,9 +24,9 @@ new Autoloader();
 new Application(__DIR__, array(
 	'translation'	=> 'pl',
 	
-	'author'		=> 'DEMOn',
+	'author'		=> 'Rafał Pitoń',
 	'name'			=> 'Miblo Demoblog',
 	'description'	=> 'A demonstration of Miblo capabilities',
-	'domain'		=> 'demolabs.com',
+	'domain'		=> 'rpiton.com',
 	'path'			=> 'miblo',
 ));

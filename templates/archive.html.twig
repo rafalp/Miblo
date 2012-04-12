@@ -1,0 +1,22 @@
+{% set yearNow = false %}
+{% for post in posts %}
+{% if yearNow != post.depth[0] %}
+		<div class="row">
+			<div class="span9 offset3">
+				<h2>{{ post.depth[0] }}</h2>
+			</div>
+		</div>
+{% set yearNow = post.depth[0] %}
+{% endif %}
+		<div class="row">
+			<div class="span3">
+				<div class="post-date">{{ post.date }}</div>
+			</div>
+			<div class="span9">
+				<h3><a href="{{ post.link }}">{{ post.title }}</a></h3>
+{% if post.description is not empty %}
+				<p class="help-block">{{ post.description }}</p>
+{% endif %}
+			</div>
+		</div>
+{% endfor %}

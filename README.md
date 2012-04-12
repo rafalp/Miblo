@@ -75,7 +75,8 @@ Customisation of Miblo is two step process. First you edit templates located in 
 Defautly Miblo uses following templates during generation:
 
 * wrapper.html.twig - Used on both blog index and post pages
-* index.html.twig - Used on blog index page to present list of blog entries
+* index.html.twig - Used on blog index
+* archive.html.twig - Used on to present list of all blog entries
 * post.html.twig - Used on post page to present post content
 * rss.xml.twig - Used to generate RSS channel for your blog
 

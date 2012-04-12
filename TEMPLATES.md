@@ -13,11 +13,12 @@ wrapper.html.twig
 * path - blog path
 * post - array containing current post data
 * previous - array containing previous post data or false if current post is empty or first one
+* special - equals to 'index' on blog index, 'archive' on blog archive and undefined on other pages
 * title - current post title
 
 
-index.html.twig
----------------
+index.html.twig and archive.html.twig
+-------------------------------------
 * author - blog author
 * description - current post description or blog description if post one is empty
 * domain - blog domain

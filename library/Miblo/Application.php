@@ -421,24 +421,28 @@ class Application
 			$pages ++;
 		}
 		
-		// Generate Index
-		$TplIndex = $this->_twig->loadTemplate('index.html.twig');
-		file_put_contents($this->_makeDirPath('site/index.html'), $this->_tplWrapper->render(array(
-			'name'			=> $this->_name,
-			'author'		=> $this->_author,
-			'description'	=> $this->_description,
-			'domain'		=> $this->_domain,
-			'path'			=> $this->_path,
-			'page'			=> $TplIndex->render(array(
+		// Generate Index and Archive
+		foreach (array('index', 'archive') as $page)
+		{
+			$TplIndex = $this->_twig->loadTemplate($page . '.html.twig');
+			file_put_contents($this->_makeDirPath('site/' . $page . '.html'), $this->_tplWrapper->render(array(
+				'special'		=> $page,
 				'name'			=> $this->_name,
 				'author'		=> $this->_author,
 				'description'	=> $this->_description,
 				'domain'		=> $this->_domain,
 				'path'			=> $this->_path,
-				'posts'			=> $this->_posts,
-			)),
-		)));
-				
+				'page'			=> $TplIndex->render(array(
+					'name'			=> $this->_name,
+					'author'		=> $this->_author,
+					'description'	=> $this->_description,
+					'domain'		=> $this->_domain,
+					'path'			=> $this->_path,
+					'posts'			=> $this->_posts,
+				)),
+			)));
+		}
+	
 		// Generate RSS
 		$TplRss = $this->_twig->loadTemplate('rss.xml.twig');
 		file_put_contents($this->_makeDirPath('site/rss.xml'), $TplRss->render(array(
