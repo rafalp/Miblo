@@ -174,7 +174,7 @@ class Application
 		// Set translation
 		if (isset($config['translation']))
 		{
-			$translationFile = $this->_makeDirPath('library/MicroPub/Translation/') . str_replace(array('/', '\\'), '', $config['translation']) . '.php';
+			$translationFile = $this->_makeDirPath('library/Miblo/Translation/') . str_replace(array('/', '\\'), '', $config['translation']) . '.php';
 			if (file_exists($translationFile))
 			{
 				include $translationFile;
