@@ -21,12 +21,9 @@ use Pirx\Autoloader;
 use Miblo\Application;
 
 new Autoloader();
-new Application(__DIR__, array(
-	'translation'	=> 'pl',
-	
-	'author'		=> 'Rafał Pitoń',
+new Application(__DIR__, array(	
+	'author'		=> 'DEMOn',
 	'name'			=> 'Miblo Demoblog',
 	'description'	=> 'A demonstration of Miblo capabilities',
-	'domain'		=> 'rpiton.com',
-	'path'			=> 'miblo',
+	'domain'		=> 'demolabs.com',
 ));
